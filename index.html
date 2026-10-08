@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#d9d9de">
+<title>Amr Kamal & Sereen Ayman | Wedding Invitation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stars" class="stars" aria-hidden="true"></div>
+
+<main id="intro" class="intro">
+  <img class="cover" src="invitation-cover.png" alt="Amr Kamal & Sereen Ayman Wedding Invitation">
+  <!-- Transparent clickable area positioned over the printed OPEN INVITATION button. -->
+  <button id="openInvitation" class="open-hotspot" type="button" aria-label="Open invitation"></button>
+  <div class="curtain curtain-left" aria-hidden="true"></div>
+  <div class="curtain curtain-right" aria-hidden="true"></div>
+  <div class="sparkle-flash" aria-hidden="true"></div>
+</main>
+
+<section id="weddingContent" class="wedding-content" aria-hidden="true">
+  <div class="page-shell">
+    <div class="hanging-jewels" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="page-inner">
+      <p class="eyebrow">TOGETHER WITH THEIR FAMILIES</p>
+      <h1>Amr <span>&amp;</span> Sereen</h1>
+      <p class="subtitle">INVITE YOU TO CELEBRATE THEIR MARRIAGE</p>
+      <div class="ornament"><span>✦</span><i></i><b>♡</b><i></i><span>✦</span></div>
+
+      <div class="details-card">
+        <div class="date">DECEMBER 12, 2026</div>
+        <div class="time">8:00 PM – 12:00 AM</div>
+        <div class="venue">Four Seasons Hotel Cairo at Nile Plaza<br>Plaza Ballroom</div>
+        <div class="address">1089 Nile Corniche, Garden City, Cairo</div>
+      </div>
+
+      <a class="action-button" data-kiss href="https://maps.google.com/?q=Four+Seasons+Hotel+Cairo+at+Nile+Plaza" target="_blank" rel="noopener">VIEW LOCATION</a>
+
+      <div class="countdown-wrap">
+        <div class="section-title">COUNTDOWN TO OUR WEDDING</div>
+        <div class="countdown">
+          <div><strong id="days">00</strong><span>DAYS</span></div>
+          <div><strong id="hours">00</strong><span>HOURS</span></div>
+          <div><strong id="minutes">00</strong><span>MINUTES</span></div>
+          <div><strong id="seconds">00</strong><span>SECONDS</span></div>
+        </div>
+      </div>
+
+      <div class="action-grid">
+        <button id="confirmBtn" class="action-button filled" data-kiss type="button">CONFIRM ATTENDANCE</button>
+        <button id="shareBtn" class="action-button" data-kiss type="button">SHARE INVITATION</button>
+        <button id="photosBtn" class="action-button photos-action" data-kiss type="button"><span aria-hidden="true">✦</span> WEDDING PHOTOS <span aria-hidden="true">✦</span></button>
+      </div>
+
+      <p class="photos-note">The photos button is ready — add your album link in <b>script.js</b>.</p>
+    </div>
+  </div>
+</section>
+
+<button id="musicBtn" class="music-btn" data-kiss type="button" aria-label="Play music">♪</button>
+<audio id="weddingMusic" src="love-me-like-you-do.mp3" preload="auto" loop></audio>
+<audio id="kissSound" src="cute-kiss.wav" preload="auto"></audio>
+
+<div id="rsvpModal" class="modal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
+    <button id="closeModal" class="close-modal" data-kiss type="button" aria-label="Close">×</button>
+    <p class="section-title">RSVP</p>
+    <h2 id="rsvpTitle">Will you join us?</h2>
+    <input id="guestName" type="text" placeholder="Your name" autocomplete="name">
+    <select id="attendance"><option>Yes, I will attend</option><option>Sorry, I can't attend</option></select>
+    <input id="guestCount" type="number" min="1" max="10" value="1" placeholder="Number of guests">
+    <button id="rsvpSubmit" class="action-button filled" data-kiss type="button">PREPARE CONFIRMATION</button>
+    <p id="rsvpNote" class="rsvp-note"></p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

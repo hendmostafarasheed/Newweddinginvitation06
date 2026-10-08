@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#d8d8dd">
+<title>Amr & Sereen | Wedding Photos</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body.photo-page{min-height:100svh;background:radial-gradient(circle at 50% 15%,#fff 0,#dedee3 48%,#c9c8d0 100%);display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden;color:#4b174f}
+.photo-page .photo-shell{width:min(720px,100%);position:relative;overflow:hidden;text-align:center;padding:72px 24px 56px;border:1px solid rgba(99,39,93,.3);border-radius:32px;background:rgba(255,255,255,.62);box-shadow:0 22px 90px rgba(70,40,75,.18),inset 0 0 70px rgba(255,255,255,.6)}
+.photo-page .photo-shell:before,.photo-page .photo-shell:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;filter:blur(1px);opacity:.18;pointer-events:none}
+.photo-page .photo-shell:before{left:-90px;bottom:-70px;background:radial-gradient(circle,#e77d35,transparent 65%)}
+.photo-page .photo-shell:after{right:-90px;top:-70px;background:radial-gradient(circle,#66336d,transparent 65%)}
+.photo-page .jewel-line{position:absolute;left:0;right:0;top:0;height:100px;pointer-events:none}
+.photo-page .jewel-line span{position:absolute;top:0;width:2px;background:linear-gradient(#8b6b86,#fff);opacity:.75}
+.photo-page .jewel-line span:after{content:"";position:absolute;left:-7px;bottom:-15px;width:16px;height:22px;background:linear-gradient(135deg,#fff,#d2d2d8 44%,#8b4b88 46%,#f3b17e 72%,#fff);clip-path:polygon(50% 0,100% 35%,72% 100%,28% 100%,0 35%);filter:drop-shadow(0 0 8px rgba(255,255,255,.95))}
+.photo-page .jewel-line span:nth-child(1){left:8%;height:76px}.photo-page .jewel-line span:nth-child(2){left:24%;height:50px}.photo-page .jewel-line span:nth-child(3){left:41%;height:88px}.photo-page .jewel-line span:nth-child(4){left:59%;height:56px}.photo-page .jewel-line span:nth-child(5){left:76%;height:82px}.photo-page .jewel-line span:nth-child(6){left:92%;height:48px}
+.photo-page .photo-kicker{letter-spacing:.3em;font-size:.76rem;color:#6a306b;margin:0 0 12px}
+.photo-page h1{margin:0;color:#6a306b;font-size:clamp(2.5rem,8vw,4.8rem);font-style:italic;line-height:1.05}
+.photo-page h1 span{color:#e17a32}
+.photo-page .photo-heart{font-size:1.8rem;color:#7a3c76;margin:18px 0}
+.photo-page .photo-copy{max-width:520px;margin:0 auto;color:#5b315e;line-height:1.7;font-size:1rem}
+.photo-page .photo-frame{margin:30px auto 24px;width:min(430px,100%);aspect-ratio:4/3;border-radius:26px;border:1px solid rgba(106,48,107,.25);background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(230,229,235,.72));box-shadow:inset 0 0 35px rgba(255,255,255,.75),0 15px 40px rgba(80,40,90,.12);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.photo-page .photo-frame:before{content:"♡";font-size:8rem;color:rgba(106,48,107,.09);position:absolute;transform:rotate(-12deg)}
+.photo-page .photo-frame-content{position:relative;z-index:1}.photo-page .camera{font-size:3rem;color:#e17a32}.photo-page .frame-label{margin-top:8px;letter-spacing:.12em;color:#6a306b;font-size:.75rem}
+.photo-page .photo-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}.photo-page .photo-actions .action-button{margin:0}.photo-page .back-link{display:inline-block;margin-top:18px;color:#6a306b;text-decoration:none;font-size:.86rem;letter-spacing:.08em}.photo-page #albumMessage{min-height:22px;margin:16px 0 0;color:#6a306b;font-size:.82rem}
+@media(max-width:600px){.photo-page{padding:12px!important}.photo-page .photo-shell{padding:62px 16px 38px;border-radius:24px}.photo-page .photo-copy{font-size:.9rem}.photo-page .photo-frame{margin-top:22px}.photo-page .photo-actions .action-button{width:auto;margin:0;min-width:210px}}
+</style>
+</head>
+<body class="photo-page">
+<div id="stars" class="stars" aria-hidden="true"></div>
+<main class="photo-shell">
+  <div class="jewel-line" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <p class="photo-kicker">AMR &amp; SEREEN</p>
+  <h1>Our <span>Wedding</span> Photos</h1>
+  <div class="photo-heart">♡</div>
+  <p class="photo-copy">A little place for all the beautiful memories from our special day. Tap below to open the full wedding album.</p>
+  <div class="photo-frame" aria-hidden="true">
+    <div class="photo-frame-content"><div class="camera">✦ ♡ ✦</div><div class="frame-label">MEMORIES FOREVER</div></div>
+  </div>
+  <div class="photo-actions">
+    <button id="openAlbum" class="action-button filled" type="button">OPEN PHOTO ALBUM</button>
+  </div>
+  <p id="albumMessage"></p>
+  <a class="back-link" href="index.html">← BACK TO INVITATION</a>
+</main>
+<script src="photos.js"></script>
+<script>
+(function(){const wrap=document.getElementById('stars');const count=window.innerWidth<600?30:55;for(let i=0;i<count;i++){const s=document.createElement('span');s.className='star';s.style.left=(Math.random()*100)+'vw';s.style.top=(Math.random()*100)+'vh';s.style.setProperty('--d',(1.6+Math.random()*3.5)+'s');s.style.setProperty('--delay',(-Math.random()*4)+'s');wrap.appendChild(s)}})();
+</script>
+</body>
+</html>
